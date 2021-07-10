@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+    <h1 id="title"><strong>Hello</strong></h1>
+    <a href="https://www.google.com">Google</a>
+    <input type="checkbox">
+
+    <button class="btn">Click Me</button>
+
+    <ul id="list">
+      <li class="list">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="list">Second</li>
+      <li class="list">Third</li>
+    </ul>
+
+  </body>
+
+</html>
+
+
+console:
+//display the ancle tag.
+document.querySelector("a");
+<a href=​"https:​/​/​www.google.com">​Google​</a>​
+
+//display the attributes in ancle tag.
+document.querySelector("a").attributes;
+NamedNodeMap {0: href, href: href, length: 1}
+
+//display the href attribute which is there in ancle tag.
+document.querySelector("a").getAttribute("href");
+"https://www.google.com"
+
+//changing or manupulating href attribute from google.com to bing.com
+document.querySelector("a").setAttribute("href","https://www.bing.com");
+undefined

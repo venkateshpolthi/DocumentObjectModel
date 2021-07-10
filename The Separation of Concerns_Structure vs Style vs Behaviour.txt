@@ -1,0 +1,75 @@
+index.html:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+    <h1 id="title">Hello</h1>
+    <a href="https://www.google.com">Google</a>
+    <input type="checkbox">
+
+    <button class="btn">Click Me</button>
+
+    <ul id="list">
+      <li class="list">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="list">Second</li>
+      <li class="list">Third</li>
+    </ul>
+
+  </body>
+
+</html>
+
+styles.css:
+.invisible{
+  visibility: hidden;
+}
+.huge{
+  font-size: 10rem;
+  color:red;
+  font-weight: bold;
+}
+
+
+Console:
+//class list will shows the list of classes available in that particular element.
+document.querySelector("button").classList;
+DOMTokenList ["btn", value: "btn"]
+
+//add will add the new class to that element.
+document.querySelector("button").classList.add("invisible");
+undefined
+document.querySelector("button").classList;
+DOMTokenList(2) ["btn", "invisible", value: "btn invisible"]
+
+
+document.querySelector("button").classList.add("invisible");
+undefined
+
+//remove will remove the existing class from that element.
+document.querySelector("button").classList.remove("invisible");
+undefined
+
+//toggle will add the class if that doesn't already exist in the element or it will remove if it already exist in the element.
+document.querySelector("button").classList.toggle("invisible");
+true
+document.querySelector("button").classList.toggle("invisible");
+false
+document.querySelector("button").classList.toggle("invisible");
+true
+document.querySelector("button").classList.toggle("invisible");
+false
+document.querySelector("button").classList.toggle("invisible");
+true
+document.querySelector("button").classList.toggle("invisible");
+false
+
+
+document.querySelector("h1").classList.add("huge");

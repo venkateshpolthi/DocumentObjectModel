@@ -1,0 +1,52 @@
+index.html:
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+    <h1 id="title"><strong>Hello</strong></h1>
+    <a href="https://www.google.com">Google</a>
+    <input type="checkbox">
+
+    <button class="btn">Click Me</button>
+
+    <ul id="list">
+      <li class="list">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="list">Second</li>
+      <li class="list">Third</li>
+    </ul>
+
+  </body>
+
+</html>
+
+console:
+//innerHTML and textContent will replace the data with new new data.
+document.querySelector("h1").innerHTML="good bye";
+"good bye"
+document.querySelector("h1").innerHTML;
+"good bye"
+
+//Difference between innerHTML and textContent is innerHTML will display or insert everything whatever there in mentioned HTML tag, if new tags exist in inside h1 also it will display or insert.
+document.querySelector("h1").innerHTML;
+"<strong>Hello</strong>"
+
+//textContent only insert or display the text information, it will not show the tags.
+document.querySelector("h1").textContent;
+"Hello"
+
+//Difference between innerHTML and textContent is innerHTML will display or insert everything whatever there in mentioned HTML tag, if new tags exist in inside h1 also it will display or insert.
+document.querySelector("h1").innerHTML="<em>Good bye</em>;
+VM107:1 Uncaught SyntaxError: Invalid or unexpected token
+document.querySelector("h1").innerHTML="<em>Good bye</em>";
+"<em>Good bye</em>"
+document.querySelector("h1").textContent="<em>Hi</em>";
+"<em>Hi</em>"

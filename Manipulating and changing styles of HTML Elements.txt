@@ -1,0 +1,60 @@
+index.html:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+    <h1 id="title">Hello</h1>
+    <a href="https://www.google.com">Google</a>
+    <input type="checkbox">
+
+    <button class="btn">Click Me</button>
+
+    <ul id="list">
+      <li class="list">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="list">Second</li>
+      <li class="list">Third</li>
+    </ul>
+
+  </body>
+
+</html>
+
+Console:
+document.querySelector("h1").style.color="red";
+"red"
+document.querySelector("h1").style.fontSize=10rem;
+VM469:1 Uncaught SyntaxError: Invalid or unexpected token
+document.querySelector("h1").style.fontSize="10rem";
+"10rem"
+document.querySelector("h1").style.padding="30%";
+"30%"
+document.querySelector("h1").style.visibility="hidden";
+"hidden"
+
+
+
+
+document.getElementsByClassName("btn").style.backgroundColor ="yellow";
+VM336:1 Uncaught TypeError: Cannot set property 'backgroundColor' of undefined
+    at <anonymous>:1:62
+(anonymous) @ VM336:1
+document.getElementsByClassName("btn")[0].style.backgroundColor ="yellow";
+"yellow"
+document.queryselector("button").style.backgroundColor ="yellow";
+VM23:1 Uncaught TypeError: document.queryselector is not a function
+    at <anonymous>:1:10
+(anonymous) @ VM23:1
+document.querySelector("button").style.backgroundColor ="yellow";
+"yellow"
+document.querySelector("button.btn").style.backgroundColor ="green";
+"green"
+document.querySelector(".btn").style.backgroundColor ="yellow";
+"yellow"

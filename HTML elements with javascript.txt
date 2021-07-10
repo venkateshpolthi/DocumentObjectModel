@@ -1,0 +1,165 @@
+DMO:
+HTML DOM methods are actions you can perform (on HTML Elements).
+HTML DOM properties are values (of HTML Elements) that you can set or change.
+With the HTML DOM, JavaScript can access and change all the elements of an HTML document.
+
+What is the HTML DOM?
+The HTML DOM is a standard object model and programming interface for HTML. It defines:
+
+The HTML elements as objects
+The properties of all HTML elements
+The methods to access all HTML elements
+The events for all HTML elements
+In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+The DOM Programming Interface:
+The HTML DOM can be accessed with JavaScript (and with other programming languages).
+In the DOM, all HTML elements are defined as objects.
+The programming interface is the properties and methods of each object.
+A property is a value that you can get or set (like changing the content of an HTML element).
+A method is an action you can do (like add or deleting an HTML element).
+
+
+index.html:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+    <h1 id="title">Hello</h1>
+    <a href="https://www.google.com">Google</a>
+    <input type="checkbox">
+
+    <button class="btn">Click Me</button>
+
+    <ul id="list">
+      <li class="list">
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li class="list">Second</li>
+      <li class="list">Third</li>
+    </ul>
+
+  </body>
+
+</html>
+
+Console:
+//displeying the last tag in ul.
+document.firstElementChild.lastElementChild.lastElementChild.lastElementChild;
+"Third"
+
+//changing ul last element to Venkat,but this will not change the content in webpage so this is not right way.
+document.firstElementChild.lastElementChild.lastElementChild.lastElementChild="Venkat";
+"Venkat"
+
+//changing or inserting ul last element to Venkat.
+document.firstElementChild.lastElementChild.lastElementChild.lastElementChild.innerHTML="Venkat";
+"Venkat"
+
+//Double quotes should be must inside braces.
+document.querySelector(li a);
+VM1048:1 Uncaught SyntaxError: missing ) after argument list
+
+//get the list of ancle tags inside list tag.
+document.querySelector("li a");
+<a href=​"https:​/​/​www.google.com">​Google​</a>​
+
+//change text in ancle tag from Google to Apple.
+document.querySelector("li a").innerHTML="Apple";
+"Apple"
+document.querySelector("body button").innerText = "click it";
+"click it"
+
+//add color
+document.firstElementChild.lastElementChild.firstElementChild.style.color="red";
+"red"
+document.firstElementChild.lastElementChild.firstElementChild.style.color="green";
+"green"
+
+//Get the list of elements with name li.
+document.getElementsByTagName("li");
+HTMLCollection(3) [li.list, li.list, li.list]0: li.listaccessKey: ""ariaAtomic: nullariaAutoComplete: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: class, class: class, length: 1}autocapitalize: ""autofocus: falsebaseURI: "file:///C:/Users/PVENKAT3/Web%20Development%20course/DOM%20Challenge%20Starting%20Files/DOM%20Challenge%20Starting%20Files/index.html"childElementCount: 1childNodes: NodeList(3) [text, a, text]children: HTMLCollection [a]classList: DOMTokenList ["list", value: "list"]className: "list"clientHeight: 18clientLeft: 0clientTop: 0clientWidth: 1310contentEditable: "inherit"dataset: DOMStringMap {}dir: ""draggable: falseelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: ahidden: falseid: ""innerHTML: "\n        <a href=\"https://www.google.com\">Apple</a>\n      "innerText: "Apple"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: alocalName: "li"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: li.listnextSibling: textnodeName: "LI"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 18offsetLeft: 48offsetParent: bodyoffsetTop: 118offsetWidth: 1310onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<li class=\"list\">\n        <a href=\"https://www.google.com\">Apple</a>\n      </li>"outerText: "Apple"ownerDocument: documentparentElement: ulparentNode: ulpart: DOMTokenList [value: ""]prefix: nullpreviousElementSibling: nullpreviousSibling: textscrollHeight: 18scrollLeft: 0scrollTop: 0scrollWidth: 1310shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {additiveSymbols: "", alignContent: "", alignItems: "", alignSelf: "", alignmentBaseline: "", …}tabIndex: -1tagName: "LI"textContent: "\n        Apple\n      "title: ""translate: truetype: ""value: 0__proto__: HTMLLIElement(...)1: li.list2: li.listaccessKey: ""ariaAtomic: nullariaAutoComplete: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: class, class: class, length: 1}autocapitalize: ""autofocus: falsebaseURI: "file:///C:/Users/PVENKAT3/Web%20Development%20course/DOM%20Challenge%20Starting%20Files/DOM%20Challenge%20Starting%20Files/index.html"childElementCount: 0childNodes: NodeList [text]children: HTMLCollection []classList: DOMTokenList ["list", value: "list"]className: "list"clientHeight: 18clientLeft: 0clientTop: 0clientWidth: 1310contentEditable: "inherit"dataset: DOMStringMap {}dir: ""draggable: falseelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: nullhidden: falseid: ""innerHTML: "Venkat"innerText: "Venkat"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: nulllocalName: "li"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: nullnextSibling: textnodeName: "LI"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 18offsetLeft: 48offsetParent: bodyoffsetTop: 154offsetWidth: 1310onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<li class=\"list\">Venkat</li>"outerText: "Venkat"ownerDocument: documentparentElement: ulparentNode: ulpart: DOMTokenList [value: ""]prefix: nullpreviousElementSibling: li.listpreviousSibling: textscrollHeight: 18scrollLeft: 0scrollTop: 0scrollWidth: 1310shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {additiveSymbols: "", alignContent: "", alignItems: "", alignSelf: "", alignmentBaseline: "", …}tabIndex: -1tagName: "LI"textContent: "Venkat"title: ""translate: truetype: ""value: 0__proto__: HTMLLIElement(...)length: 3__proto__: HTMLCollection
+
+//We can't style the list of arrays at a time in JS.
+document.getElementsByTagName("li").style.color="purple";
+VM1825:1 Uncaught TypeError: Cannot set property 'color' of undefined
+    at <anonymous>:1:48
+(anonymous) @ VM1825:1
+
+//Chnaging style by selecting position of the list in array.
+document.getElementsByTagName("li")[1].style.color="purple";
+"purple"
+
+//length of the tag
+document.getElementsByTagName("li").length;
+3
+
+//get the list of elements with the name btn.
+document.getElementsByClassName("btn");
+HTMLCollection [button.btn]0: button.btnlength: 1__proto__: HTMLCollection
+document.getElementsByClassName("btn").style.color="red";
+VM154:1 Uncaught TypeError: Cannot set property 'color' of undefined
+    at <anonymous>:1:51
+(anonymous) @ VM154:1
+
+//add color to the element by giving array position. There should be multiple calsses with the same name.
+document.getElementsByClassName("btn")[0].style.color="red";
+"red"
+
+
+
+
+//get the elemtnt by id, we can have one id with one name.
+document.getElementById("title");
+<h1 id=​"title">​Hello​</h1>​
+
+//changing text inside title id from Hello to Good bye.
+document.getElementById("title").innerHTML = "Good Bye";
+"Good Bye"
+
+//Get the H1 element.
+document.querySelector("h1");
+<h1 id=​"title">​Good Bye​</h1>​
+
+document.querySelector("#title");
+<h1 id=​"title">​Good Bye​</h1>​
+
+document.querySelector(".btn");
+<button class=​"btn">​Click Me​</button>​
+
+
+
+
+//If we are feching data from parent and child element . or #will not come.
+document.querySelector("li a");
+<a href=​"https:​/​/​www.google.com">​Google​</a>​
+document.querySelector("a");
+<a href=​"https:​/​/​www.google.com">​Google​</a>​
+
+//If we are feching data from element with the same level class use (.class name) with no space between element and class.
+document.querySelector("li.list");
+<li class=​"list">​…​</li>​::marker​<a href=​"https:​/​/​www.google.com">​Google​</a>​</li>​
+document.querySelector("#list.a");
+null
+
+//If we are feching data from id by using child class name use (.class name) with space, space represent the child element.
+document.querySelector("#list a");
+<a href=​"https:​/​/​www.google.com">​Google​</a>​
+document.querySelector("#list list");
+null
+document.querySelector("#list .list");
+<li class=​"list">​…​</li>​
+document.querySelectorAll("#list .list");
+NodeList(3) [li.list, li.list, li.list]0: li.list1: li.list2: li.listlength: 3__proto__: NodeList
+document.querySelectorAll("#list .list")[2];
+<li class=​"list">​…​</li>​
+document.querySelectorAll("#list .list")[2].style.color = "blue";
+"blue"
+document.querySelector("li a").style.color ="red";
+"red"
